@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksneaker_store=self.webpackChunksneaker_store||[]).push([[939],{7939:function(e,n,s){s.r(n),s.d(n,{default:function(){return u}});s(2791);var r=s(5332),t=s(184),u=function(){return(0,t.jsx)("div",{className:"not-found",children:(0,t.jsx)(r.$j,{})})}}}]);
+//# sourceMappingURL=939.e659177d.chunk.js.map

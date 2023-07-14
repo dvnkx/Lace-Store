@@ -6,15 +6,15 @@ import {
   adidas_logo,
   nb_logo,
   nike_logo,
-  yeezy_logo,
+  puma_logo,
   background,
   example,
 } from "../../assets/index.js";
 
-const Landing = () => {
+export const Landing = () => {
   return (
-    <div className="container">
-      <p>Discover limited sneakars without limitation</p>
+    <div className="landing-container">
+      <h1>Discover limited sneakers without limitation</h1>
       <div className="content">
         <div className="brand-intro">
           <ImgIntro
@@ -29,7 +29,7 @@ const Landing = () => {
             alt={"nike"}
             logoAlt={"nike-logo"}
             src={
-              "https://img.modivo.cloud/product(4/4/0/6/4406284951c301b5e1d1289d6ba16a49406b1061_0000201641316_03_ai,webp)/nike-vzuttia-air-jordan-1-mid-gs-554725-124-kolorovii.webp"
+              "https://img.modivo.cloud/product(b/4/4/9/b44983aabb9ed3c6718a674624537b8401fcafd8_0000208545129_01_ts,webp)/nike-vzuttia-react-hyperset-ci2955-140-bilii.webp"
             }
             logo={nike_logo}
           />
@@ -37,7 +37,7 @@ const Landing = () => {
             alt={"adidas"}
             logoAlt={"adidas-logo"}
             src={
-              "https://img.modivo.cloud/zoomapp(b/6/b/f/b6bfe624952001b52cb5fd7d59e10a47f273e612_0000209024753_08_ki.jpg,webp)/adidas-vzuttia-zx-700-hd-cf-c-gy3296-bilii.webp"
+              "https://img.modivo.cloud/product(9/1/c/a/91cab012e6eb0c10c921bae4f133a80c080801f1_01_0000301202141_pa.jpg,webp)/adidas-vzuttia-adi2000-hq6917-golubii.webp"
             }
             logo={adidas_logo}
           />
@@ -45,9 +45,9 @@ const Landing = () => {
             alt={"yeezy"}
             logoAlt={"yeezy-logo"}
             src={
-              "https://werare.com.ua/image/cache/catalog/i/ek/gp/7d857fa92767740a89cccf02ea985f9c-890x1000.jpg"
+              "https://img.modivo.cloud/product(8/9/5/7/8957f031388a5e69d3fd7db9abb45c2343c9af7a_0000209287899_01_plj_1.jpg,webp)/puma-snikerci-mayze-lth-wns-381983-01-bilii.webp"
             }
-            logo={yeezy_logo}
+            logo={puma_logo}
           />
         </div>
         <p className="text-intro">What are we talking about?</p>
@@ -82,7 +82,12 @@ const Landing = () => {
         <p className="text-intro">Are they legit?</p>
       </div>
       <div className="legit">
-        <img alt="example-img" src={example} className="example-img" />
+        <img
+          alt="example-img"
+          src={example}
+          className="example-img"
+          loading="lazy"
+        />
         <h1>
           100% <br /> LEGIT
         </h1>
@@ -92,11 +97,14 @@ const Landing = () => {
         <h2>
           Our sneakers is 100% LEGIT. <br /> FAKE IS BULLSH*T
         </h2>
-        <img alt="background" src={background} className="background" />
+        <img
+          alt="background"
+          src={background}
+          className="background"
+          loading="lazy"
+        />
       </div>
       <div className="hot-cards"></div>
     </div>
   );
 };
-
-export default Landing;

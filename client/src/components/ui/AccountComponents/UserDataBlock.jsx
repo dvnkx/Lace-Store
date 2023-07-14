@@ -54,8 +54,6 @@ const UserDataBlock = ({ setVisible }) => {
       email,
       birthday,
     });
-
-    window.location.reload();
   };
 
   return (

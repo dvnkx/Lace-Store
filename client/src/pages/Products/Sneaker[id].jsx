@@ -16,6 +16,8 @@ const CardPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
 
+  console.log(id);
+
   useEffect(() => {
     axios
       .get(`/cards/${id}`)

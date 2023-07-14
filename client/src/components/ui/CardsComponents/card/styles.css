@@ -1,9 +1,11 @@
 .card-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: inline-block;
-  width: 384px;
+  width: 23vw;
   height: 660px;
   border: 2px solid #0b0909;
-  margin: 1em;
+  margin: 1vw;
   cursor: pointer;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -70,9 +72,21 @@
 .card-container .card-foot h1 {
   font-size: 25px;
   margin: 0.7em;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .card-container .card-foot p {
   font-size: 25px;
   opacity: 0.7;
   margin: 0.7rem;
+}
+
+@media screen and (max-width: 767px) {
+  .card-container {
+    margin-left: 6%;
+    width: 40%;
+    height: 750px;
+  }
 }

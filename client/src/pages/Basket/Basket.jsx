@@ -26,8 +26,6 @@ const Basket = () => {
       productsImages: cards.map((card) => card.images[0]),
     };
 
-    console.log(orderData);
-
     axios.patch(`/basket:${userData?._id}`, orderData).then((_) => {
       alert(`Your order now in proccess`);
       setCards([]);

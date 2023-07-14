@@ -66,7 +66,7 @@ export const Login = () => {
         <SubmitButton disabled={!isValid} type={"submit"}>
           Submit
         </SubmitButton>
-        <CustomLink to={"/registartion"}>Registartion </CustomLink>
+        <CustomLink to={"/registration"}>Registration </CustomLink>
       </form>
     </div>
   );

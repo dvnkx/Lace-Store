@@ -7,12 +7,11 @@
   font-family: "Kanit", sans-serif;
 }
 
-.container {
+.landing-container {
   width: 100%;
   height: auto;
 
-  p {
-    display: inline-block;
+  h1 {
     margin-left: 7%;
     margin-right: 7%;
     font-size: 100px;
@@ -58,6 +57,7 @@
         height: auto;
         position: absolute;
         opacity: 0;
+        background-color: transparent;
       }
     }
   }
@@ -145,6 +145,39 @@
       width: 50%;
       height: auto;
       transform: rotate(-20deg);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    h1 {
+      text-align: center;
+      font-size: 50px;
+    }
+
+    .brand-intro {
+      flex-wrap: wrap;
+      .tc-container {
+        box-sizing: border-box;
+        width: 50%;
+        border: 0.75px solid $primary;
+      }
+    }
+    .legit {
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        bottom: 2%;
+      }
+    }
+    .item-1 {
+      visibility: hidden;
+    }
+    .item-2 {
+      visibility: hidden;
+    }
+    .item-3 {
+      visibility: hidden;
     }
   }
 }

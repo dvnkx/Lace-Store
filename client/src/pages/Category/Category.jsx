@@ -45,7 +45,7 @@ export const Cards = () => {
               return brand.includes(searchTerm) || model.includes(searchTerm);
             })
             .map((card) => {
-              return card.sex === currentPage ? (
+              return card.sex === currentPage && !card.forKids ? (
                 <Card key={card._id} card={card} />
               ) : currentPage !== "Kids" &&
                 card.sex === "Unisex" &&

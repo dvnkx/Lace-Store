@@ -2,8 +2,6 @@
 @import "../../../Styles/mixins";
 
 .info-block {
-  width: 100%;
-
   .data {
     position: relative;
     width: 80%;
@@ -23,7 +21,7 @@
       align-items: center;
       width: 40px;
       height: 40px;
-      margin-left: 84%;
+      margin-left: 78%;
       position: absolute;
       border: 1px solid $primary;
       cursor: pointer;
@@ -49,7 +47,7 @@
   box-shadow: $account_box_shadow;
 
   .buttons {
-    margin-left: -0.4%;
+    margin: auto;
   }
 }
 
@@ -84,7 +82,7 @@
   }
 
   .buttons {
-    margin-left: -7.5%;
+    margin: auto;
   }
 
   .react-tel-input {
@@ -115,7 +113,6 @@
 }
 
 .password-data-form {
-  margin-top: 10px;
   padding: 3% 5% 0 5%;
   border: 2px solid $gray;
   display: flex;
@@ -132,7 +129,6 @@
   }
 
   .buttons {
-    margin-left: -0.1%;
-    padding: 3% 0 2% 0;
+    margin: auto;
   }
 }

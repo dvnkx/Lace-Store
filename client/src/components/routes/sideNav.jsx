@@ -31,7 +31,7 @@ const SideNav = ({ avatar }) => {
   }, [dispatch, logout]);
 
   return (
-    <div className="left">
+    <div className="side-nav-container">
       <div className="links">
         <div className="avatar">
           <img alt="avatar" className="image" src={avatar} />
@@ -44,7 +44,7 @@ const SideNav = ({ avatar }) => {
           <img alt="ord" src={href !== "Orders" ? sneaker : sneaker_active} />
           My Orders
         </CustomLink>
-        <span />
+        <hr />
         <button className="logout" onClick={onClickLogout}>
           <img alt="logout" src={exit} />
           Logout

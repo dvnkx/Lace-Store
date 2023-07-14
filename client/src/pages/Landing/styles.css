@@ -5,19 +5,18 @@
   font-family: "Kanit", sans-serif;
 }
 
-.container {
+.landing-container {
   width: 100%;
   height: auto;
 }
-.container p {
-  display: inline-block;
+.landing-container h1 {
   margin-left: 7%;
   margin-right: 7%;
   font-size: 100px;
   font-weight: bold;
   text-transform: uppercase;
 }
-.container .brand-intro {
+.landing-container .brand-intro {
   border-top: 1.5px solid #0b0909;
   border-bottom: 1.5px solid #0b0909;
   border-left: 1px solid #0b0909;
@@ -27,7 +26,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-.container .brand-intro .tc-container {
+.landing-container .brand-intro .tc-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,28 +40,29 @@
   height: 100%;
   position: relative;
 }
-.container .brand-intro .tc-container:hover .main-img {
+.landing-container .brand-intro .tc-container:hover .main-img {
   -webkit-filter: blur(4px);
           filter: blur(4px);
 }
-.container .brand-intro .tc-container:hover .top-img {
+.landing-container .brand-intro .tc-container:hover .top-img {
   -webkit-transition: 200ms ease-in-out;
   -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   opacity: 0.6;
 }
-.container .brand-intro .tc-container .main-img {
+.landing-container .brand-intro .tc-container .main-img {
   width: 100%;
   height: 502px;
   border-right: 1px solid rgb(0, 0, 0);
 }
-.container .brand-intro .tc-container .top-img {
+.landing-container .brand-intro .tc-container .top-img {
   width: 50%;
   height: auto;
   position: absolute;
   opacity: 0;
+  background-color: transparent;
 }
-.container .text-intro {
+.landing-container .text-intro {
   margin-top: 10px;
   margin-bottom: 10px;
   display: -webkit-box;
@@ -75,19 +75,19 @@
   font-size: 90px;
   color: #0b0909;
 }
-.container .text-content {
+.landing-container .text-content {
   max-width: 1680px;
   min-height: 600px;
   background-color: #d6d6d6;
   font-size: 1.2rem;
 }
-.container .text-content .description {
+.landing-container .text-content .description {
   margin-top: 45px;
   margin-bottom: 45px;
   text-align: center;
   font-size: 1.3rem;
 }
-.container .legit {
+.landing-container .legit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,20 +103,20 @@
   position: relative;
   color: #44444c;
 }
-.container .legit h1 {
+.landing-container .legit h1 {
   position: absolute;
   font-size: 5em;
   top: 43px;
   left: 1em;
   line-height: 70px;
 }
-.container .legit h2 {
+.landing-container .legit h2 {
   position: absolute;
   bottom: 9%;
   right: 7%;
   font-size: 2em;
 }
-.container .legit p {
+.landing-container .legit p {
   position: absolute;
   font-size: 2em;
   background-color: #d6d6d6;
@@ -124,23 +124,23 @@
   padding: 10px;
   text-transform: uppercase;
 }
-.container .legit .item-1 {
+.landing-container .legit .item-1 {
   top: 37%;
   left: 51%;
 }
-.container .legit .item-2 {
+.landing-container .legit .item-2 {
   top: 30%;
   left: 22%;
 }
-.container .legit .item-3 {
+.landing-container .legit .item-3 {
   top: 60%;
   left: 37%;
 }
-.container .legit .background {
+.landing-container .legit .background {
   width: 100%;
   height: auto;
 }
-.container .legit .example-img {
+.landing-container .legit .example-img {
   position: absolute;
   top: 20%;
   left: 19%;
@@ -149,4 +149,35 @@
   -webkit-transform: rotate(-20deg);
       -ms-transform: rotate(-20deg);
           transform: rotate(-20deg);
+}
+@media screen and (max-width: 767px) {
+  .landing-container h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+  .landing-container .brand-intro {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .landing-container .brand-intro .tc-container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50%;
+    border: 0.75px solid #0b0909;
+  }
+  .landing-container .legit h1 {
+    font-size: 40px;
+  }
+  .landing-container .legit h2 {
+    bottom: 2%;
+  }
+  .landing-container .item-1 {
+    visibility: hidden;
+  }
+  .landing-container .item-2 {
+    visibility: hidden;
+  }
+  .landing-container .item-3 {
+    visibility: hidden;
+  }
 }

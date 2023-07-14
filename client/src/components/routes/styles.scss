@@ -5,13 +5,21 @@
   text-decoration: none;
 }
 
-nav {
-  margin: 0;
-  background-color: $white;
-  width: 100%;
-  height: 80px;
-  border-bottom: 0.75px solid $gray;
+.navbar-container {
+  width: 100vw;
+  height: 10vh;
   display: flex;
+  border-bottom: 0.75px solid $gray;
+  background-color: $white;
+
+  .brand {
+    a {
+      display: none;
+    }
+    h1 {
+      display: none;
+    }
+  }
 
   a {
     width: 17.5%;
@@ -36,8 +44,8 @@ nav {
       position: relative;
 
       &:before {
-        position: absolute;
         content: "";
+        position: absolute;
         width: 0%;
         height: 1px;
         border-bottom: 2px solid $primary;
@@ -66,113 +74,300 @@ nav {
       position: absolute;
       background-color: rgb(68, 68, 76, 0.6);
       color: $gray;
+      transition: 200ms ease;
     }
   }
 
   .icon {
     width: 30px;
-    height: 30px;
   }
 
   .logo {
     width: 60px;
     height: 60px;
   }
-}
 
-footer {
-  position: relative;
-  width: 100%;
-  height: auto;
-  color: $primary;
-
-  h1 {
-    text-align: center;
-    width: 100%;
-    height: 160px;
-    padding-bottom: 12px;
-    font-size: 100px;
-    background-color: $primary;
-    color: $white;
+  button {
+    display: none;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    grid-template-rows: repeat(5, 30px);
-    margin-bottom: 35px;
-    margin-left: 45px;
-    padding-left: 40px;
-    padding-top: 40px;
-    width: 60%;
-    height: 45%;
-    gap: 1em;
-    text-transform: uppercase;
+  .dropdown-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-container {
+    height: 30vh;
 
     a {
-      font-family: "Kanit", sans-serif;
-      font-weight: 200;
-      color: $primary;
-      font-size: 20px;
-    }
-  }
-
-  .join {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top: 172px;
-    right: 0px;
-    width: 40%;
-    height: 45%;
-    text-transform: uppercase;
-
-    h2 {
-      padding-top: 5%;
-      padding-left: 20%;
-      font-size: 2.5em;
-    }
-  }
-}
-
-.bottom {
-  width: 100%;
-  height: auto;
-
-  div {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-
-    span {
-      width: 90%;
-      height: auto;
-      border-top: 2px solid $primary;
-    }
-  }
-
-  .links {
-    display: flex;
-    justify-content: flex-start;
-
-    h3 {
-      font-size: 20px;
-      margin-left: 5%;
+      display: none;
     }
 
-    div {
-      margin-left: 48.5%;
+    .brand {
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       a {
-        margin: 0 1em;
-        color: $primary;
+        border: none;
+        display: block;
+        margin-right: 50px;
+        img {
+          width: 100px;
+        }
+      }
+
+      h1 {
+        flex: 0.5;
+        display: inline;
+        text-transform: uppercase;
+        opacity: 0.6;
+        letter-spacing: 0.1em;
+        font-size: 30px;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+
+      .dropdown-menu {
+        position: absolute;
+        display: block;
+        box-sizing: border-box;
+        padding: 20px;
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+        margin: 30px 70px 0 0px;
+        border-radius: 7px;
+        background-color: rgba($color: $secondary, $alpha: 0.2);
+        transition: all 0.3s ease;
+
+        &.open {
+          opacity: 1;
+        }
+
+        .categories {
+          width: 100%;
+          height: 75%;
+
+          a {
+            width: 50%;
+            height: 50%;
+            border: none;
+            display: inline-block;
+
+            &.active p::before {
+              width: 35%;
+            }
+
+            p {
+              font-size: 15px;
+
+              &::before {
+                border-bottom: 0.5px solid $primary;
+                bottom: -0.5px;
+              }
+            }
+          }
+        }
+
+        .account-i {
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          height: 25%;
+
+          a {
+            border: none;
+            display: inline-block;
+            height: 100%;
+
+            .icon {
+              margin-left: 5px;
+              width: 20px;
+            }
+          }
+        }
+      }
+
+      .toggle-btn {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin: 20px 20px 0 0;
+        border: none;
+        background-color: transparent;
+        opacity: 0.6;
+        cursor: pointer;
+        border-radius: 50%;
+
+        &:hover {
+          transition: 200ms ease-in-out;
+          opacity: 1;
+        }
+
+        &:active {
+          transition: 0.2s ease;
+          scale: 0.95;
+        }
+
+        .toggle-btn_i {
+          width: 40px;
+          transition: all 0.2s ease;
+          rotate: 90deg;
+          padding-top: 10px;
+
+          &.open {
+            rotate: 0deg;
+          }
+        }
       }
     }
   }
 }
 
-.left {
+.footer-container {
+  max-width: 2000px;
+  margin: auto;
+  color: $primary;
+  background-color: $white;
+
+  .brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 20vh;
+      font-size: 6.5vw;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  .footer {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 0;
+
+    .footer-col {
+      box-sizing: border-box;
+      width: 25%;
+      padding: 0 15px;
+      text-transform: capitalize;
+
+      h4 {
+        font-size: 18px;
+        margin-bottom: 30px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 30px;
+          background-color: $secondary;
+          height: 2px;
+          box-sizing: border-box;
+          width: 50px;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            font-weight: 300;
+            color: $primary;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s;
+
+            &:hover {
+              padding-left: 10px;
+              color: white;
+            }
+          }
+        }
+      }
+
+      .linked-list {
+        a {
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          background-color: rgba($color: $primary, $alpha: 0.2);
+          margin: 0 10px 10px 0;
+          border-radius: 50%;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: rgba($color: white, $alpha: 0.2);
+          }
+
+          img {
+            margin: 10px 0 0 10px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    height: auto;
+
+    .hr-div {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+
+      hr {
+        width: 90%;
+      }
+    }
+
+    h3 {
+      padding: 0 0 10px 82px;
+    }
+  }
+}
+
+.side-nav-container {
+  display: inline-block;
+  vertical-align: top;
   width: 20%;
   height: 100%;
 
@@ -182,6 +377,12 @@ footer {
     justify-content: center;
     width: 100%;
     height: 300px;
+
+    hr {
+      color: $primary;
+      width: 170px;
+      opacity: 0.7;
+    }
 
     .avatar {
       width: 50px;
@@ -211,12 +412,6 @@ footer {
         height: 20px;
         transform: scaleX(-1);
       }
-    }
-
-    span {
-      border-top: 2px solid $secondary;
-      width: 200px;
-      opacity: 0.2;
     }
 
     button {

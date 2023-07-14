@@ -23,10 +23,7 @@ const CardSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    fastener: {
-      type: String,
-      required: true,
-    },
+    fastener: String,
     soleHeight: {
       type: Number,
       required: true,

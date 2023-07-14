@@ -15,7 +15,7 @@ export const registerValidation = [
   body("fullName", "Full name length must be minimum 2 symbols").isLength({
     min: 2,
   }),
-  body("avatarUrl", "Wrong url reference").optional().isURL(),
+  body("avatarUrl", "Wrong url reference").optional(),
 ];
 
 export const createCardValidation = [
@@ -24,14 +24,12 @@ export const createCardValidation = [
   body("cost", "Wrong cost format").isNumeric(),
   body("color", "Wrong color name").isString(),
   body("materials", "Wrong materials name").isString(),
-  body("fastener", "Wrong fastener").isString(),
+  body("fastener", "Wrong fastener").isString().optional(),
   body("soleHeight", "Wrong format").isNumeric(),
   body("generalHeight", "Wrong format").isNumeric(),
   body("technology", "Wrong technology").isString().optional(),
   body("images", "Wrong number of images").isArray().isLength({ min: 1 }),
-  body("sex", "Wrong sex")
-    .isString()
-    .contains("Man" || "Women" || "Unisex"),
+  body("sex", "Wrong sex").isString(),
   body("forKids").isBoolean(),
 ];
 

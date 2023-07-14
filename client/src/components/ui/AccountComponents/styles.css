@@ -1,6 +1,3 @@
-.info-block {
-  width: 100%;
-}
 .info-block .data {
   position: relative;
   width: 80%;
@@ -26,7 +23,7 @@
           align-items: center;
   width: 40px;
   height: 40px;
-  margin-left: 84%;
+  margin-left: 78%;
   position: absolute;
   border: 1px solid #0b0909;
   cursor: pointer;
@@ -57,7 +54,7 @@
           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .user-data-form .buttons {
-  margin-left: -0.4%;
+  margin: auto;
 }
 
 .address-data-form {
@@ -96,7 +93,7 @@
   margin-left: -9%;
 }
 .address-data-form .buttons {
-  margin-left: -7.5%;
+  margin: auto;
 }
 .address-data-form .react-tel-input {
   border-radius: 0px;
@@ -121,7 +118,6 @@
 }
 
 .password-data-form {
-  margin-top: 10px;
   padding: 3% 5% 0 5%;
   border: 2px solid #8c8c8c;
   display: -webkit-box;
@@ -145,6 +141,5 @@
   margin-left: 7%;
 }
 .password-data-form .buttons {
-  margin-left: -0.1%;
-  padding: 3% 0 2% 0;
+  margin: auto;
 }

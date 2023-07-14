@@ -5,7 +5,7 @@ import { CustomLink } from "../../index";
 
 const Card = ({ card }) => {
   return (
-    <CustomLink className="card-container" to={`/sneakers/${card._id}`}>
+    <CustomLink className="card-container" to={`/products/${card._id}`}>
       <div className="card-head">
         <h1>{card.brand}</h1>
         <p>{card.cost}$</p>

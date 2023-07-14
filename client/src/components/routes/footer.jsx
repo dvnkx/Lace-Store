@@ -1,49 +1,91 @@
 import React from "react";
+import "./styles.css";
+
 import { CustomLink } from "../ui/index.js";
 
-import "./styles.css";
-import { Input } from "../ui/index.js";
+import { instagram, twitter, telegram, linked_in } from "../../assets/index";
 
 const Footer = () => {
   return (
-    <footer>
-      <h1>Lace Store</h1>
-      <div className="grid">
-        <CustomLink>About us</CustomLink>
-        <CustomLink>Privacy Policy</CustomLink>
-        <CustomLink>How to Order</CustomLink>
-        <CustomLink>Faq</CustomLink>
-        <CustomLink>Refund Policy</CustomLink>
-        <CustomLink>How to Refund</CustomLink>
-        <CustomLink>Contact us</CustomLink>
-        <CustomLink>Terms of Service</CustomLink>
-        <CustomLink>Track Your Order</CustomLink>
-        <CustomLink>Products</CustomLink>
-        <CustomLink>Customer Care</CustomLink>
-        <span />
-        <CustomLink>Career</CustomLink>
+    <footer className="footer-container">
+      <div className="brand">
+        <h1>Lace Store</h1>
       </div>
-      <div className="join">
-        <h2>Join Our Community</h2>
-        <Input
-          placeholder={"ENTER YOUR EMAIL"}
-          label={"ENTER YOUR EMAIL"}
-          type={"email"}
-        />
-      </div>
-      <div className="bottom">
-        <div>
-          <span />
+      <div className="footer">
+        <div className="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li>
+              <CustomLink>About us</CustomLink>
+            </li>
+            <li>
+              <CustomLink>Faq</CustomLink>
+            </li>
+            <li>
+              <CustomLink>Contact us</CustomLink>
+            </li>
+            <li>
+              <CustomLink>Products</CustomLink>
+            </li>
+            <li>
+              <CustomLink>Career</CustomLink>
+            </li>
+          </ul>
         </div>
-        <div className="links">
-          <h3>© 2023 LACESTORE. All right reserved.</h3>
-          <div>
-            <CustomLink>Instagram</CustomLink>
-            <CustomLink>Twitter</CustomLink>
-            <CustomLink>Telegram</CustomLink>
-            <CustomLink>LinkedIn</CustomLink>
+        <div className="footer-col">
+          <h4>Get help</h4>
+          <ul>
+            <li>
+              <CustomLink>Private policy</CustomLink>
+            </li>
+            <li>
+              <CustomLink>Refund policy</CustomLink>
+            </li>
+            <li>
+              <CustomLink>Terms of service</CustomLink>
+            </li>
+            <li>
+              <CustomLink>Customer care</CustomLink>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>How to</h4>
+          <ul>
+            <li>
+              <CustomLink>How to order</CustomLink>
+            </li>
+            <li>
+              <CustomLink>How to refund</CustomLink>
+            </li>
+            <li>
+              <CustomLink>Track your order</CustomLink>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Follow us</h4>
+          <div className="linked-list">
+            <CustomLink>
+              <img src={instagram} />
+            </CustomLink>
+            <CustomLink>
+              <img src={twitter} />
+            </CustomLink>
+            <CustomLink>
+              <img src={telegram} />
+            </CustomLink>
+            <CustomLink>
+              <img src={linked_in} />
+            </CustomLink>
           </div>
         </div>
+      </div>
+      <div className="bottom">
+        <div className="hr-div">
+          <hr />
+        </div>
+        <h3>© 2023 LACESTORE. All right reserved.</h3>
       </div>
     </footer>
   );

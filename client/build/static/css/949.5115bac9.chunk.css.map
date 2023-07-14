@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/949.5115bac9.chunk.css","mappings":"AAAA,oBAEE,eAAgB,CADhB,WAEF","sources":["pages/Favorites/styles.css"],"sourcesContent":[".favorites-contaner {\n  width: 100vw;\n  min-height: 91vh;\n}"],"names":[],"sourceRoot":""}

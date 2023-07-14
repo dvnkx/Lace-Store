@@ -72,6 +72,10 @@
 .card-container .card-foot h1 {
   font-size: 25px;
   margin: 0.7em;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .card-container .card-foot p {
   font-size: 25px;

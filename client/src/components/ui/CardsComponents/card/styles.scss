@@ -72,6 +72,9 @@
     h1 {
       font-size: 25px;
       margin: 0.7em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     p {

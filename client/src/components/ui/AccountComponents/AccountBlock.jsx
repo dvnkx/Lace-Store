@@ -4,14 +4,11 @@ import { pencil } from "../../../assets/index";
 
 import "./styles.css";
 
-const AccountBlock = ({ data, children, section, styles, setVisible }) => {
+const AccountBlock = ({ data, children, section, setVisible }) => {
   return (
-    <div style={styles && { marginTop: styles.margin }} className="info-block">
+    <div className="info-block">
       <h1>{section}</h1>
-      <div
-        style={styles && { height: styles.height, width: styles.width }}
-        className="data"
-      >
+      <div className="data">
         {setVisible && (
           <button onClick={setVisible} className="info">
             <img alt="pencil" src={pencil} />

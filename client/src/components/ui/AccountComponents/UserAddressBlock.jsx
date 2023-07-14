@@ -79,11 +79,11 @@ const UserAddressBlock = ({ setVisible }) => {
         placeholder={"Cherkasy region"}
       />
       <UserInput
-        section={"Shkilnyi lane"}
+        section={"Street"}
         error={Boolean(errors.street?.message)}
         errorMessage={errors.street?.message}
         {...register("street")}
-        placeholder={"Shevchenko"}
+        placeholder={"Shkilniy provulok"}
       />
       <UserInput
         section={"City"}

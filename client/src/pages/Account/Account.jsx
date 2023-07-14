@@ -16,14 +16,7 @@ import {
   UserAddressBlock,
 } from "../../components/ui/index";
 
-import {
-  shipStyles,
-  shippingStyles,
-  userDataStyles,
-  passwordStyles,
-  passwordData,
-  shipData,
-} from "../../helpers/AccountData";
+import { passwordData } from "../../helpers/AccountData";
 
 const Account = () => {
   const [state, dispatch] = useReducer(toggleAccountReducer, {
@@ -48,53 +41,43 @@ const Account = () => {
       {
         <>
           <SideNav avatar={avatarUrl ? avatarUrl : account} />
-          <div className="middle">
+          <div className="user-data-block">
             {!state.data ? (
               <AccountBlock
                 setVisible={() => dispatch({ type: "data" })}
-                styles={userDataStyles}
                 data={personalData}
                 section={"Personal Data"}
               />
             ) : (
               <UserDataBlock setVisible={() => dispatch({ type: "data" })} />
             )}
+          </div>
+          <div className="address-block">
             {!state.address ? (
               <AccountBlock
                 setVisible={() => dispatch({ type: "address" })}
                 section={"My shipping addresses"}
                 data={addressData}
-                styles={shippingStyles}
               ></AccountBlock>
             ) : (
               <UserAddressBlock
                 setVisible={() => dispatch({ type: "address" })}
               />
             )}
+          </div>
+
+          <div className="password-block">
             {!state.password ? (
               <AccountBlock
                 setVisible={() => dispatch({ type: "password" })}
                 section={"Change Password"}
                 data={passwordData}
-                styles={passwordStyles}
               />
             ) : (
               <UserPasswordBlock
                 setVisible={() => dispatch({ type: "password" })}
               />
             )}
-          </div>
-          <div className="right">
-            <AccountBlock
-              data={shipData}
-              styles={shipStyles}
-              section={"Default Shipping"}
-            />
-            <AccountBlock
-              data={shipData}
-              styles={shipStyles}
-              section={"Default Shipping Method"}
-            />
           </div>
         </>
       }

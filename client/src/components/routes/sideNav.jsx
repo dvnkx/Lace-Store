@@ -31,7 +31,7 @@ const SideNav = ({ avatar }) => {
   }, [dispatch, logout]);
 
   return (
-    <div className="left">
+    <div className="side-nav-container">
       <div className="links">
         <div className="avatar">
           <img alt="avatar" className="image" src={avatar} />

@@ -30,7 +30,9 @@ const Navbar = () => {
       </CustomLink>
       <div className="brand">
         <h1>Lace Store</h1>
-        <img src={logo} />
+        <CustomLink to={"/"}>
+          <img src={logo} />
+        </CustomLink>
       </div>
       <CustomLink to="/products/men">
         <p>Men</p>
